@@ -51,7 +51,7 @@ public class ItemService {
 
 		if (obj.getPedidoItens() != null && !obj.getPedidoItens().isEmpty()) {
 			throw new DataIntegrityViolationException(
-					"O Colaborador possui uma order de serviço e não pode ser deletado");
+					"O Item possui pedido e não pode ser deletado");
 		}
 
 		itemRepository.deleteById(id);
