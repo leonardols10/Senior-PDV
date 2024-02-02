@@ -1,0 +1,352 @@
+{
+	"info": {
+		"_postman_id": "7ce7b638-1b9d-4c5e-be3f-03a5bc98deb4",
+		"name": "SeniorPDV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24570986",
+		"_collection_link": "https://lively-meadow-593767.postman.co/workspace/Team-Workspace~da860584-148b-4c77-8957-86454755dfee/collection/24570986-7ce7b638-1b9d-4c5e-be3f-03a5bc98deb4?action=share&source=collection_link&creator=24570986"
+	},
+	"item": [
+		{
+			"name": "Item",
+			"item": [
+				{
+					"name": "ItemByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/item/dc38f812-ebcd-4688-ad78-af67ddee898d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"dc38f812-ebcd-4688-ad78-af67ddee898d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ItemGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/item?nome=Teste",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Teste"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ItemCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"7bd388d8-c496-4ac4-93e4-5375d535c385\",\r\n                    \"nome\": \"Teste\",\r\n\r\n        \"preco\": 2,\r\n        \"produto\": false,\r\n        \"ativo\": true\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/item",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ItemPut",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"7bd388d8-c496-4ac4-93e4-5375d535c385\",\r\n        \"nome\": \"Leo\",\r\n        \"preco\": 2,\r\n        \"produto\": true,\r\n        \"ativo\": true\r\n    }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/item/7bd388d8-c496-4ac4-93e4-5375d535c385",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"7bd388d8-c496-4ac4-93e4-5375d535c385"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ItemDelete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/item/be477cc4-3d31-4a7d-b453-dc0c34aa9ad2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"item",
+								"be477cc4-3d31-4a7d-b453-dc0c34aa9ad2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ItemPedido",
+			"item": [
+				{
+					"name": "PedidoItemByID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido-itens/cb0b2213-102e-4235-85b1-2711e47431c2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido-itens",
+								"cb0b2213-102e-4235-85b1-2711e47431c2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoItemGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedido-itens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido-itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoItemCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"quantidade\": 5555,\r\n        \"precoUnitario\": 50,\r\n        \"pedido\": \"b2ad13a1-1a62-4f94-8377-530ed33392a0\",\r\n        \"item\": \"dc38f812-ebcd-4688-ad78-af67ddee898d\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido-itens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido-itens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ItemPut",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"74927909-827d-4818-8409-7538ac295432\",\r\n        \"quantidade\": 2,\r\n        \"precoUnitario\": 40.0,\r\n        \"dataCriacao\": \"01/02/2024\",\r\n        \"pedido\": \"e9ead9ab-55fa-4f24-a979-a9a58c8ee836\",\r\n        \"item\": \"fcd6cc96-ad0e-4d32-ab02-a1969bfa11fd\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedido-itens/95b50909-c45f-4faf-97b9-31bdeac1175e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedido-itens",
+								"95b50909-c45f-4faf-97b9-31bdeac1175e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pedido",
+			"item": [
+				{
+					"name": "PedidoGetByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedidos/56ca80c5-bb0d-441b-8828-dee095eecdf4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos",
+								"56ca80c5-bb0d-441b-8828-dee095eecdf4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoGetAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoCreate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"ABERTO\",\r\n    \"titulo\": \"Pedido com Desconto\",\r\n    \"observacoes\": \"Aplicando desconto\",\r\n    \"pedidoItens\": [\r\n        {\r\n            \"item\": \"fcd6cc96-ad0e-4d32-ab02-a1969bfa11fd\",\r\n            \"quantidade\": 2\r\n        }\r\n         \r\n    ],\r\n    \"desconto\": 20\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedidos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PedidoPut",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"status\": \"FECHADO\",\r\n        \"titulo\": \"teste\",\r\n        \"observacoes\": \"45\",\r\n                \"desconto\": null\r\n\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pedidos/e9ead9ab-55fa-4f24-a979-a9a58c8ee836",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pedidos",
+								"e9ead9ab-55fa-4f24-a979-a9a58c8ee836"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
