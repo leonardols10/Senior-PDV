@@ -4,8 +4,8 @@ import java.util.UUID;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.seniorpdv.domain.Pedido;
+import com.seniorpdv.domain.PedidoItem;
 
-public interface PedidoRepository extends JpaRepository<Pedido, UUID> {
+public interface PedidoItemRepository extends JpaRepository<PedidoItem, UUID> {
 
 }
