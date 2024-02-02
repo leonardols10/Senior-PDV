@@ -14,22 +14,29 @@ O SeniorPDV é um projeto demostrativo desenvolvido com Spring Boot, destinado a
 - **Spring Boot DevTools**: Para desenvolvimento rápido com reinicialização automática.
 - **Spring Boot Starter Test**: Para testes unitários e de integração.
 
-## Como Executar
 
-### Pré-requisitos
+## Configuração
 
-- JDK 11 ou superior
-- Maven 3.6 ou superior
+1. **Requisitos:**
+   - Java 11 ou superior.
+   - Banco de dados configurado (se necessário).
 
-### Instruções
+2. **Configuração do Projeto:**
+   - Clone o repositório.
+   - Configure as propriedades do banco de dados em `application.properties`.
 
-1. Clone o repositório:
+3. **Execução:**
+   - Execute o aplicativo usando sua IDE ou com o comando `./mvnw spring-boot:run`.
 
-```bash
-git clone https://github.com/seuusuario/seniorpdv.git
-cd seniorpdv
+4. **Contribuição:**
+   - Sinta-se à vontade para contribuir para o desenvolvimento desta API. Abra problemas (issues) ou envie pull requests com melhorias e correções.
 
-./mvnw spring-boot:run
+5. **Licença:**
+   - Este projeto está licenciado sob a [Licença MIT](LICENSE.md) - veja o arquivo LICENSE.md para detalhes.
+
+---
+
+**Leonardo Lima  - leonardosilvalima40@gmail.com**
 
 ## Testando com Postman
 
